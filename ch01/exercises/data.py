@@ -7,7 +7,7 @@ print(15 / 10)
 print(15 // 10)
 #should be 1
 print(-15 // 10)
-#should be -1 **It was actually -2 because it rounds down kinda
+#should be -1 **It was actually -2 because floor operation
 print(15 % 10)
 #should be 5
 print(10 % 15)
