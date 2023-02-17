@@ -1,7 +1,6 @@
 import turtle #1. import modules
 import random
-
-""" #Part A
+#Part A
 window = turtle.Screen() # 2.  Create a screen
 window.bgcolor('lightblue')
 
@@ -36,7 +35,7 @@ for i in range(11):
 
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
-window.exitonclick()  """
+window.exitonclick()
 
 # PART B - complete part B here
 import pygame
