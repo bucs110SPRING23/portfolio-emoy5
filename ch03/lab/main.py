@@ -5,9 +5,7 @@ pygame.init()
 
 screen = pygame.display.set_mode(size=(1000,1000))
 screen.fill("black")
-screen_size = pygame.display.get_window_size()
-screen_width = screen_size[0]
-screen_height = screen_size[1]
+screen_width, screen_height = pygame.display.get_window_size()
 
 # Part A
 pygame.draw.circle(screen, "orange", (screen_width/2, screen_height/2), screen_width/2)
