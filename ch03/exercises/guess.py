@@ -24,13 +24,13 @@ guess = -1
 
 for i in range(3):
     if guess != num: 
-        guess = int(input("Guess a number between 1 and 10: ))
+        guess = int(input("Guess a number between 1 and 10: "))
         if guess == num:
             print("You guessed it! My number was", num)
             break or return
         elif guess < num:
-            print("Too low!)
+            print("Too low!")
         elif guess > num:
-            print("Too high!)
+            print("Too high!")
 
 '''
