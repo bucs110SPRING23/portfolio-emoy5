@@ -35,19 +35,25 @@ while not done: # must respond to every event
             if event.key == pygame.K_SPACE:
                 random.shuffle(order)
                 turns = len(order)
+                result = []
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 turns = turns-1
                 if hitboxes["red"].collidepoint(event. pos):
-                result.append("red")
-            elif hitboxes["green"].collidepoint(event. pos):
-                result.append("green")
-            elif hitboxes["blue"].collidepoint(event. pos):
-                result.append("blue")
-            elif hitboxes["purple"].collidepoint(event. pos):
-                result.append("purple")
+                    result.append("red")
+                elif hitboxes["green"].collidepoint(event. pos):
+                    result.append("green")
+                elif hitboxes["blue"].collidepoint(event. pos):
+                    result.append("blue")
+                elif hitboxes["purple"].collidepoint(event. pos):
+                    result.append("purple")
 
 done = True
 #pygame.Rect - keeps track of 
 #   x and  coordinates
 #   width and height
 #   Rectangles can't track visuals
+
+#using "pass" allows u to bypass the requirement
+#can be used in if statements
+#Ex: if event.key == pygame.K_SPACE:
+#       pass
