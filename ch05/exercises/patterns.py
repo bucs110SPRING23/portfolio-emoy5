@@ -1,14 +1,21 @@
 #Part 1
 def star_pyramid(x):
-    for _ in range(x+1):
-        print("*" * _ )
+    for i in range(x+1):
+        print("*" * i )
 
-star_pyramid(int(input("Enter a number to determine the height of your pyramid: ")))
 
 #Part 2
 def rstar_pyramid(x):
-    for _ in range(x+1):
+    for i in range(x+1):
         print("*" * x)
         x -=1
 
-rstar_pyramid(int(input("Enter a number to determine the height of your pyramid: ")))
+'''
+def rstar_pyramid(stars):
+    for i in range(stars, 0, -1)
+        print("*" * i )
+'''
+
+stars = int(input("Enter a number to determine the height of your pyramid: "))
+star_pyramid(stars)
+rstar_pyramid(stars)
