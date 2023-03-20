@@ -1,7 +1,12 @@
 def multiplication(x, y):
     result = 0
     for i in range(y):
-        result = x + x
+        """
+        multiplies two numbers without using "*"
+        args: x (int), y (int)
+        returns: (int)
+        """
+        result = result + x
     return result
     
 def exponents(s, t):
@@ -15,7 +20,7 @@ def square(z):
     return result
 
 def main():
-    print(multiplication(3, 4))
-    print(exponents(2, 3))
-    print(square(4))
+    print(multiplication(1, 4))
+    print(exponents(2, 5))
+    print(square(12))
 main()
