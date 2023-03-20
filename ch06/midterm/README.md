@@ -15,4 +15,4 @@ https://docs.python.org/3/library/turtle.html#turtle.position
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
 
-I wasn't sure how I could've softcoded? the values in the program. 
+I wasn't sure how I could've softcoded? the values in the program. Or looped things to make the code more readable while shortnening code.

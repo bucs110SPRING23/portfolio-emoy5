@@ -40,10 +40,12 @@ def graph_coordinates(upper_limit):
     
     screen = pygame.display.set_mode()
     screen.fill("black")
+    for k, v in coordinates.items():
+        
     pygame.draw.lines(screen, "white", False, list(coordinates), 1)
     flipped = pygame.transform.flip(screen, False, True)
     width, height = flipped.get_size()
-    transformed = pygame.transform.scale(screen, (width * 5, height * 5))
+    transformed = pygame.transform.scale(flipped, (width * 5, height * 5))
     
     screen.blit(transformed, (0, 0))
     pygame.display.flip()
