@@ -36,16 +36,20 @@ def graph_coordinates(upper_limit):
     return: a graph?
     """
     threenplus1_iters_dict = threenp1range(upper_limit)
-    coordinates = threenplus1_iters_dict.items()
     
+    coordinates = []
+    
+    for k, v in threenplus1_iters_dict.items():
+        coordinates.append((50*k,50*v))
+    
+    #print(coordinates)
+
     screen = pygame.display.set_mode()
     screen.fill("black")
-    for k, v in coordinates.items():
-        
-    pygame.draw.lines(screen, "white", False, list(coordinates), 1)
+    pygame.draw.lines(screen, "white", False, coordinates, 1)
     flipped = pygame.transform.flip(screen, False, True)
     width, height = flipped.get_size()
-    transformed = pygame.transform.scale(flipped, (width * 5, height * 5))
+    transformed = pygame.transform.scale(flipped, (width, height))
     
     screen.blit(transformed, (0, 0))
     pygame.display.flip()
@@ -67,8 +71,7 @@ def graph_coordinates(upper_limit):
 
 
 def main():
-    pygame.init()
-    upper_limit = 100
+    upper_limit = 20
     print(threenp1range(upper_limit))
     graph_coordinates(upper_limit)
 main()
