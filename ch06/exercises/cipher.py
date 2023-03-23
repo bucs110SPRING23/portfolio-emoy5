@@ -9,17 +9,23 @@ def cipher(text):
     return:
         :str = the encrypted or decrypted message
     """
-
-    result = ""
+    
+    text_list = []
     for char in text:
-        if char.isalpha():
-            # Determine the case of the character
-            start = ord('A') if char.isupper() else ord('a')
-            # Calculate the new position of the character after the shift
-            new_pos = (ord(char) - start + shift) % 26
-            # Convert the new position back to a character
-            char = chr(start + new_pos)
-        result += char
+        text_list.append(char)
+    
+    result = ""    
+    for pos, ltr in enumerate(text_list):
+        if ltr == " ":
+            result += ltr
+        elif ltr.isalpha():
+            start = ord('A') if ltr.isupper() else ord('a')
+            if text_list[pos-1] == "" or " ":
+                new_pos = (ord(text_list[pos]) - start + 8) % 26
+            elif ltr.isalpha():
+                new_pos = (ord(text_list[pos-1]) - start + 4) % 26
+            ltr = chr(start + new_pos)
+        result += ltr
     return result
 
 def main():
