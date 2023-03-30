@@ -1,14 +1,20 @@
-from rectangle.py import rectangle
+from rectangle import Rectangle
 class Surface:
     def __init__(self, filename, x, y, h, w):
-        self.rect = rectangle.Rectangle()
+        """
+        Takes the rectangle and puts on the screen?
+        args: (str) filename and (int) x, y, width, and height of rectangle
+        return: None
+        """
+        self.rect = Rectangle(x, y, h, w)
         self.image = str(filename)
-        self.rect.x = x
-        self.rect.y = y
-        self.rect.height = h
-        self.rect.width = w
     
     def getRect(self):
+        """
+        Takes the rectangle and puts on the screen?
+        args: None
+        return: (Rectangle) a rectangle on a surface?
+        """
         return self.rect
 
 
