@@ -23,7 +23,7 @@ def cipher(text):
             if text_list[pos-1] == "" or " ":
                 new_pos = (ord(text_list[pos]) - start + 8) % 26
             elif ltr.isalpha():
-                new_pos = (ord(text_list[pos-1]) - start + 4) % 26
+                new_pos = (ord(text_list[pos-1]) - start + 8) % 26
             ltr = chr(start + new_pos)
         result += ltr
     return result

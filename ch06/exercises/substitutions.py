@@ -1,27 +1,16 @@
 import json
 
 def main():
-    news_ptr = open("news.txt", "r")
-    subs_ptr = open("subs.json", "r")
-
-    news = news_ptr.read()
-    subs = json.load(subs_ptr)
+    text = open("news.txt", "r").read().lower()
+    subs_fptr = open("subs.json", "r")
+    subs = json.load(subs_fptr)
     print(subs, type(subs))
-    subs_ptr.close()
-
-    '''
     
-        for str in news:
-            if news is in subs:
-            
-
-
-    betternews = open("betternews.txt", "w")
-
-    json.dump(news, betternews)
-
-    '''    
-    news_ptr.close()
-    #betternews.close()
-
+    for k, v in subs.items():
+        text = text.replace(k, v)
+        #overrides the text
+    
+    fptr = open("betternews.txt", "w")
+    fptr.write(text)
+    fptr.close()
 main()
