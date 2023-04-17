@@ -1,6 +1,6 @@
 import turtle
 import pygame
-pygame.init()
+pygame.init() #should go into the main function
 
 def create_face(size):
     """
@@ -8,7 +8,7 @@ def create_face(size):
     args: (int) radius of the face
     return: None
     """
-    window = turtle.Screen()
+    window = turtle.Screen() #i think Yoehi said you don't need to set it as a variable
     turtle_face = turtle.Turtle()
     turtle_face.dot(size, "yellow")
     turtle_face.penup()
@@ -99,7 +99,7 @@ def no_sunglasses():
     pygame.display.flip()
 
 def main():
-    size = 400
+    size = 400 #static constants should be capitalized
     add_smile(size) #create_face is called in add_smile 
     add_eyes()
     
@@ -108,7 +108,7 @@ def main():
         add_sunglasses = input("Want to add sunglasses? Type yes or no exactly. ")
         
         if add_sunglasses == "yes":
-            create_sunglasses(100)
+            create_sunglasses(100) #this 100 should have a variable name
             not_answered = False
         elif add_sunglasses == "no":
             no_sunglasses()
