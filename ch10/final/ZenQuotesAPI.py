@@ -2,8 +2,22 @@ import requests
 
 class ZenQuotesAPI:
 
-    def __init__(self):
+    def __init__(self, quote):
+        """
+        Initializes the Zen Quotes API
+        args: quote : str - the quote that it returns
+        returns: None
+        """
         self.url = f'https://zenquotes.io/api/random'
+        self.string = quote
+    
+    def __str__(self) -> str:
+        """
+        By default returns a string
+        args: None
+        returns: None
+        """
+        return self.string
 
     def get(self) -> str:
         """

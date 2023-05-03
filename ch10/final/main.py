@@ -2,18 +2,12 @@ from ZenQuotesAPI import ZenQuotesAPI
 from dictionaryAPI import DictionaryAPI
 
 def main():
-    """
-    Generates a quote, then a definition of every word in the quote that appears before punctuation
-    args: None
-    return: None
-    """
+    
     generate_quote = ZenQuotesAPI()
     quote = generate_quote.get()
+    words_in_quote = separating_words(quote)
     
     print(quote)
-    
-    words_in_quote = separating_words(quote)
-   
     print(words_in_quote)
 
     for word in range(len(words_in_quote)):
