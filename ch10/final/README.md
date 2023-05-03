@@ -4,6 +4,7 @@
 Generates a random quote, then a definition of every word in the quote until a punctuation mark appears. Does not guarantee the right definition.
 
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
+Nope
 
 ## REFERENCES *(any resources you use outside of class materials)*
 
@@ -14,3 +15,4 @@ https://www.w3schools.com/python/ref_string_split.asp
 - showed how to split a string of words into a list of elements
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
+Nope
