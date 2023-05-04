@@ -27,10 +27,10 @@ class DictionaryAPI:
         """
         r = requests.get(self.url)
         response = r.json()
-        
-        
-        if response[0]["meanings"] == "":
-            return "Definition not found"
+
+        if response == {"title":"No Definitions Found","message":"Sorry pal, we couldn't find definitions for the word you were looking for.","resolution":"You can try the search again at later time or head to the web instead."}:
+            return "No Definitions Found"
+    
         else:
             meanings = response[0]["meanings"]
             definitions = meanings[0]["definitions"]

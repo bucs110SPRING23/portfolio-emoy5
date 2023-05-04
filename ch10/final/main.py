@@ -8,14 +8,15 @@ def main():
     words_in_quote = separating_words(quote)
     
     print(quote)
+    print("\n")
     print(words_in_quote)
 
     for word in range(len(words_in_quote)):
-        
         generate_definition = DictionaryAPI(words_in_quote[word])
         definition = generate_definition.get()
-    
-        print(words_in_quote[word] + " is defined as:")
+        
+        print("\n")
+        print("'"+words_in_quote[word]+"'" + " is defined as:")
         print(definition)
 
 def separating_words(quote):
